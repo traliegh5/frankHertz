@@ -212,7 +212,7 @@ def prune_data(data,thresh):
 
 # # plot_set(temp[3,:],temp[1,:],"splitt")
 # plot_set(data[3,:split1],data[1,:split1],filename)
-# plot_set(data[3,split2:split3],data[1,split2:split3],filename)
+# # plot_set(data[3,split2:split3],data[1,split2:split3],filename)
 
 
 # filename="3volt1stpeaks.CSV"
@@ -235,20 +235,20 @@ def prune_data(data,thresh):
 
 
 
-# filename="1.5volt2ndpeaks.CSV"
-# split1=2480
-# split2=2650
-# split3=5100
+filename="1.5volt2ndpeaks.CSV"
+split1=2480
+split2=2650
+split3=5100
 
 
 
-# data=read_csv(filename)[:,1:]
-# see_voltage(data)
+data=read_csv(filename)[:,1:]
+see_voltage(data)
 
 
-# # plot_set(temp[3,:],temp[1,:],"splitt")
-# plot_set(data[3,0:split1],data[1,0:split1],filename)
-# plot_set(data[3,split2:split3],data[1,split2:split3],filename)
+# plot_set(temp[3,:],temp[1,:],"splitt")
+plot_set(data[3,0:split1],data[1,0:split1],filename)
+plot_set(data[3,split2:split3],data[1,split2:split3],filename)
 
 
 
@@ -294,20 +294,20 @@ def prune_data(data,thresh):
 
 "Frank Hertz Set"
 
-filename="temperature180C.CSV"
-split1=41100
-split2=43000
-split3=103000
-split4=106000
+# filename="temperature180C.CSV"
+# split1=41100
+# split2=43000
+# split3=103000
+# split4=106000
 
-data=read_csv(filename)[:,1:]
-see_voltage(data)
+# data=read_csv(filename)[:,1:]
+# see_voltage(data)
 
 
 
-plot_set(data[3,0:split1],data[1,0:split1],filename)
-plot_set(data[3,split2:split3],data[1,split2:split3],filename)
-# plot_set(data[3,split4:],data[1,split4:],filename)
+# plot_set(data[3,0:split1],data[1,0:split1],filename)
+# plot_set(data[3,split2:split3],data[1,split2:split3],filename)
+# # plot_set(data[3,split4:],data[1,split4:],filename)
 
 
 
