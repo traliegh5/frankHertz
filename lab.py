@@ -29,7 +29,10 @@ def read_csv(filename):
                 if len(row)==5:
                     # print(type(row[0]))
                     new_row=np.array(list(map(float, row)))
-                    data.append(new_row)
+                    newer_row=[]
+                    for j in new_row:
+                        newer_row.append(abs(j))
+                    data.append(newer_row)
                     
                 else:
                     print(row)
@@ -159,16 +162,16 @@ def prune_data(data,thresh):
 # plot_set(data[3,:split1],data[1,:split1],filename)
 # plot_set(data[3,split2:split3],data[1,split2:split3],filename)
 
-# # plot_set(data[3,split4:split5],data[1,split4:split5],filename)
+# plot_set(data[3,split4:split5],data[1,split4:split5],filename)
 
 
 # "Frank Hertz Set"
 
 # filename="1battery_temp150C (1).CSV"
 # split0=50
-# split1=28200
+# split1=31200
 # split2=30600
-# split3=89400
+# split3=91400
 # split4=93000
 # split5=122700
 
@@ -195,21 +198,21 @@ def prune_data(data,thresh):
 
 
 
-filename="3volt2ndpeaks.CSV"
-split0=50
-split1=2480
-split2=2650
-split3=5100
+# filename="3volt2ndpeaks.CSV"
+# split0=50
+# split1=2480
+# split2=2650
+# split3=5100
 
 
 
-data=read_csv(filename)[:,1:]
-see_voltage(data)
+# data=read_csv(filename)[:,1:]
+# see_voltage(data)
 
 
-# plot_set(temp[3,:],temp[1,:],"splitt")
-plot_set(data[3,:split1],data[1,:split1],filename)
-plot_set(data[3,split2:split3],data[1,split2:split3],filename)
+# # plot_set(temp[3,:],temp[1,:],"splitt")
+# plot_set(data[3,:split1],data[1,:split1],filename)
+# plot_set(data[3,split2:split3],data[1,split2:split3],filename)
 
 
 # filename="3volt1stpeaks.CSV"
@@ -272,8 +275,8 @@ plot_set(data[3,split2:split3],data[1,split2:split3],filename)
 
 # filename="temperature135C (1).CSV"
 # split1=20500
-# split2=24500
-# split3=80500
+# split2=25000
+# split3=85500
 # split4=90000
 # split5=123200
 
@@ -291,20 +294,20 @@ plot_set(data[3,split2:split3],data[1,split2:split3],filename)
 
 "Frank Hertz Set"
 
-# filename="temperature180C.CSV"
-# split1=41100
-# split2=43000
-# split3=103000
-# split4=106000
+filename="temperature180C.CSV"
+split1=41100
+split2=43000
+split3=103000
+split4=106000
 
-# data=read_csv(filename)[:,1:]
-# see_voltage(data)
+data=read_csv(filename)[:,1:]
+see_voltage(data)
 
 
 
-# plot_set(data[3,0:split1],data[1,0:split1],filename)
-# plot_set(data[3,split2:split3],data[1,split2:split3],filename)
-# # plot_set(data[3,split4:],data[1,split4:],filename)
+plot_set(data[3,0:split1],data[1,0:split1],filename)
+plot_set(data[3,split2:split3],data[1,split2:split3],filename)
+# plot_set(data[3,split4:],data[1,split4:],filename)
 
 
 
